@@ -70,6 +70,7 @@
     
 
 
+    
 <meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
 <script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
 <script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
@@ -170,35 +171,7 @@
 
     
         <div class="content">
-            <h2 id="源码索引"><a href="#源码索引" class="headerlink" title="源码索引"></a>源码索引</h2><pre><code>111111
-Dim 第一字符, 第二字符, 更新公告, 最新版本, 当前版本，公告，公告1，公告2，更新公告1
-Call Plugin.Web.ClearTemp()&apos;清除浏览器缓存
-Delay 300
-返回值 = Lib.网络.获得网页源文件_增强版(&quot;http://地址&quot;, &quot;utf-8&quot;)
-TracePrint 返回值
-&apos;Form1.InputBox1.Text = 返回值
-&apos;获取版本号
-公告 = instr(返回值, &quot;公告1：&quot;)
-公告 = 公告 + 3
-公告1 = Mid(返回值, 公告,30)
-公告1 = instr(返回值, &quot;关闭&quot;)
-公告2 = Mid(返回值, 公告, 公告1 - 公告)
-第一字符 = instr(返回值, &quot;版本号：&quot;)&apos;返回某字符串在另一字符串中第一次出现的位置。
-第一字符 = 第一字符 + 4&apos;由于获取的是字符串开头的位置，要把“版本号：”这4个字符给忽略，所以加4
-最新版本 = Mid(返回值, 第一字符, 4)&apos;这样就能获取到“版本号：”后面4个字
-当前版本 = 2.0
-If CSng(最新版本) &gt; 当前版本 Then
-&apos;获取下载地址
-第二字符 = instr(返回值, &quot;结束&quot;)&apos;你得知道下载地址的尾部在什么地方，所以特地在尾部写上一个结束来表明
-第一字符 = 第一字符 + 9
-更新公告 = Mid(返回值, 第一字符, 第二字符 - 第一字符)
-MessageBox &quot;有新版本，去群文件下载&quot; &amp; Chr(10) &amp; &quot;最新版本号为：&quot; &amp; 最新版本 &amp; &quot;//&quot;&amp; Chr(10)&amp;&quot; 更新内容&quot; &amp; 更新公告 &amp; &quot;//&quot; &amp; Chr(10)&amp; &quot;公告&quot;&amp; 公告2
-Else
-第二字符 = instr(返回值, &quot;结束&quot;)&apos;你得知道下载地址的尾部在什么地方，所以特地在尾部写上一个结束来表明
-第一字符 = 第一字符 + 9
-更新公告 = Mid(返回值, 第一字符, 第二字符 - 第一字符)
-MessageBox &quot;软件当前是最新版本&quot; &amp; Chr(10) &amp; &quot;最新内容&quot;&amp; 更新公告&amp; &quot;//&quot;&amp; Chr(10) &amp;&quot;公告&quot; &amp; 公告2
-End If`</code></pre>
+            <h2 id="源码索引"><a href="#源码索引" class="headerlink" title="源码索引"></a>源码索引</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">111111</span><br><span class="line">Dim 第一字符, 第二字符, 更新公告, 最新版本, 当前版本，公告，公告1，公告2，更新公告1</span><br><span class="line">Call Plugin.Web.ClearTemp()<span class="string">'清除浏览器缓存</span></span><br><span class="line"><span class="string">Delay 300</span></span><br><span class="line"><span class="string">返回值 = Lib.网络.获得网页源文件_增强版("http://地址", "utf-8")</span></span><br><span class="line"><span class="string">TracePrint 返回值</span></span><br><span class="line"><span class="string">'</span>Form1.InputBox1.Text = 返回值</span><br><span class="line"><span class="string">'获取版本号</span></span><br><span class="line"><span class="string">公告 = instr(返回值, "公告1：")</span></span><br><span class="line"><span class="string">公告 = 公告 + 3</span></span><br><span class="line"><span class="string">公告1 = Mid(返回值, 公告,30)</span></span><br><span class="line"><span class="string">公告1 = instr(返回值, "关闭")</span></span><br><span class="line"><span class="string">公告2 = Mid(返回值, 公告, 公告1 - 公告)</span></span><br><span class="line"><span class="string">第一字符 = instr(返回值, "版本号：")'</span>返回某字符串在另一字符串中第一次出现的位置。</span><br><span class="line">第一字符 = 第一字符 + 4<span class="string">'由于获取的是字符串开头的位置，要把“版本号：”这4个字符给忽略，所以加4</span></span><br><span class="line"><span class="string">最新版本 = Mid(返回值, 第一字符, 4)'</span>这样就能获取到“版本号：”后面4个字</span><br><span class="line">当前版本 = 2.0</span><br><span class="line">If CSng(最新版本) &gt; 当前版本 Then</span><br><span class="line"><span class="string">'获取下载地址</span></span><br><span class="line"><span class="string">第二字符 = instr(返回值, "结束")'</span>你得知道下载地址的尾部在什么地方，所以特地在尾部写上一个结束来表明</span><br><span class="line">第一字符 = 第一字符 + 9</span><br><span class="line">更新公告 = Mid(返回值, 第一字符, 第二字符 - 第一字符)</span><br><span class="line">MessageBox <span class="string">"有新版本，去群文件下载"</span> &amp; Chr(10) &amp; <span class="string">"最新版本号为："</span> &amp; 最新版本 &amp; <span class="string">"//"</span>&amp; Chr(10)&amp;<span class="string">" 更新内容"</span> &amp; 更新公告 &amp; <span class="string">"//"</span> &amp; Chr(10)&amp; <span class="string">"公告"</span>&amp; 公告2</span><br><span class="line">Else</span><br><span class="line">第二字符 = instr(返回值, <span class="string">"结束"</span>)<span class="string">'你得知道下载地址的尾部在什么地方，所以特地在尾部写上一个结束来表明</span></span><br><span class="line"><span class="string">第一字符 = 第一字符 + 9</span></span><br><span class="line"><span class="string">更新公告 = Mid(返回值, 第一字符, 第二字符 - 第一字符)</span></span><br><span class="line"><span class="string">MessageBox "软件当前是最新版本" &amp; Chr(10) &amp; "最新内容"&amp; 更新公告&amp; "//"&amp; Chr(10) &amp;"公告" &amp; 公告2</span></span><br><span class="line"><span class="string">End If`</span></span><br></pre></td></tr></table></figure>
         </div>
     
 
@@ -229,9 +202,10 @@ End If`</code></pre>
 				console.error("Error: [hexo-tag-aplayer] Unrecognized tag argument(2): autoplay=false");
 			</script>
 
-    <div id="aplayer-cOkjXRJO" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-dbpxOBUj" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="539542" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="autoautoplay:true" data-theme="#555"
     ></div>
+
 
         </div>
     
@@ -243,7 +217,7 @@ End If`</code></pre>
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2020/03/01/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0114514/">
+            <a href="/2020/03/01/%E5%BD%A9%E5%85%AD%E8%87%AA%E5%8A%A8%E6%8C%82%E6%9C%BA/">
                 彩虹六号全自动挂机
             </a>
         </h1>
@@ -306,7 +280,7 @@ End If`</code></pre>
             </li>
             
             <li>
-                <a class="footer-post" href="/2020/03/01/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0114514/">彩虹六号全自动挂机</a>
+                <a class="footer-post" href="/2020/03/01/%E5%BD%A9%E5%85%AD%E8%87%AA%E5%8A%A8%E6%8C%82%E6%9C%BA/">彩虹六号全自动挂机</a>
             </li>
             
         </ul>
