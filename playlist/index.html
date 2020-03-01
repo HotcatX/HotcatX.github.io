@@ -10,6 +10,8 @@
 
     <!--Description-->
     
+        <meta name="description" content="">
+    
 
     <!--Author-->
     
@@ -18,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="W e l c o m e"/>
+        <meta property="og:title" content="歌单"/>
     
 
     <!--Open Graph Description-->
@@ -29,7 +31,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -43,7 +45,7 @@
 
     <!-- Title -->
     
-    <title>W e l c o m e</title>
+    <title>歌单 - W e l c o m e</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -70,7 +72,10 @@
     
 
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
+</head>
 
 
 <body>
@@ -136,24 +141,21 @@
     <div class="col-sm-12">
 
         <!--Title and Logo-->
-        <header>
+        
+            <header>
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">W e l c o m e</h1>
-        
     </div>
 </header>
-
-        <section class="main">
-            
+            <section class="main">
                 
 <div class="post">
 
-    <div class="post-header index">
+    <div class="post-header">
         <h1 class="title">
-            <a href="/2020/03/01/%E8%BD%AF%E4%BB%B6%E6%A3%80%E6%B5%8B%E6%9B%B4%E6%96%B0%20%E6%BA%90%E7%A0%81/">
-                软件检测更新 源码
+            <a href="/playlist/index.html">
+                歌单
             </a>
         </h1>
         <div class="post-info">
@@ -165,109 +167,31 @@
         </div>
     </div>
 
-    
-        <div class="content">
-            <h2 id="源码索引"><a href="#源码索引" class="headerlink" title="源码索引"></a>源码索引</h2><pre><code>111111
-Dim 第一字符, 第二字符, 更新公告, 最新版本, 当前版本，公告，公告1，公告2，更新公告1
-Call Plugin.Web.ClearTemp()&apos;清除浏览器缓存
-Delay 300
-返回值 = Lib.网络.获得网页源文件_增强版(&quot;http://地址&quot;, &quot;utf-8&quot;)
-TracePrint 返回值
-&apos;Form1.InputBox1.Text = 返回值
-&apos;获取版本号
-公告 = instr(返回值, &quot;公告1：&quot;)
-公告 = 公告 + 3
-公告1 = Mid(返回值, 公告,30)
-公告1 = instr(返回值, &quot;关闭&quot;)
-公告2 = Mid(返回值, 公告, 公告1 - 公告)
-第一字符 = instr(返回值, &quot;版本号：&quot;)&apos;返回某字符串在另一字符串中第一次出现的位置。
-第一字符 = 第一字符 + 4&apos;由于获取的是字符串开头的位置，要把“版本号：”这4个字符给忽略，所以加4
-最新版本 = Mid(返回值, 第一字符, 4)&apos;这样就能获取到“版本号：”后面4个字
-当前版本 = 2.0
-If CSng(最新版本) &gt; 当前版本 Then
-&apos;获取下载地址
-第二字符 = instr(返回值, &quot;结束&quot;)&apos;你得知道下载地址的尾部在什么地方，所以特地在尾部写上一个结束来表明
-第一字符 = 第一字符 + 9
-更新公告 = Mid(返回值, 第一字符, 第二字符 - 第一字符)
-MessageBox &quot;有新版本，去群文件下载&quot; &amp; Chr(10) &amp; &quot;最新版本号为：&quot; &amp; 最新版本 &amp; &quot;//&quot;&amp; Chr(10)&amp;&quot; 更新内容&quot; &amp; 更新公告 &amp; &quot;//&quot; &amp; Chr(10)&amp; &quot;公告&quot;&amp; 公告2
-Else
-第二字符 = instr(返回值, &quot;结束&quot;)&apos;你得知道下载地址的尾部在什么地方，所以特地在尾部写上一个结束来表明
-第一字符 = 第一字符 + 9
-更新公告 = Mid(返回值, 第一字符, 第二字符 - 第一字符)
-MessageBox &quot;软件当前是最新版本&quot; &amp; Chr(10) &amp; &quot;最新内容&quot;&amp; 更新公告&amp; &quot;//&quot;&amp; Chr(10) &amp;&quot;公告&quot; &amp; 公告2
-End If`</code></pre>
-        </div>
-    
+    <div class="content">
 
-</div>
-            
-                
-<div class="post">
+        <!-- Gallery -->
+        
 
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2020/03/01/%E8%A7%86%E9%A2%91%E6%B5%8B%E8%AF%95/">
-                视频测试
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2020-03-01</span>
-            
-            
-            
-        </div>
+        <!-- Post Content -->
+        
+    <div id="aplayer-rjhbRUdM" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="651603567" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#FF4081"
+    ></div>
+
     </div>
 
     
-        <div class="content">
-            
-			<script>
-				console.error("Error: [hexo-tag-aplayer] Unrecognized tag argument(2): autoplay=false");
-			</script>
-        </div>
+
+    
+
+    <!-- Comments -->
     
 
 </div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2020/03/01/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0114514/">
-                彩虹六号全自动挂机
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2020-03-01</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <h2 id="软件更新索引"><a href="#软件更新索引" class="headerlink" title="软件更新索引"></a>软件更新索引</h2><p>版本号：2.00 </p>
-<p>更新公告：2.0整合主挂机程序 合并一些设置 结束 </p>
-<p>公告1：2.0是最终版本 关闭</p>
-<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p>下载地址: <a href="https://pan.baidu.com/s/1wOQRInl-yoiWtuNTlyim4A" target="_blank" rel="noopener">彩六自动挂机v2.0最终版</a><br>提取码：mp36</p>
-<h3 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h3><p><img src="http://m.qpic.cn/psc?/V11poEkK03NNcx/QlCgJczD4Pcaro11QCoKeoUAmBzj39xhPBjJS4Yzjchvx.TXkLqNHehmSW9wfpq3iV4zTJJqGPMDn*ljQp.GKQ!!/b&bo=3QFZAQAAAAADB6Y!&rf=viewer_4" alt=""></p>
-
-        </div>
-    
-
-</div>
-            
-        </section>
+            </section>
+        
     </div>
 </div>
-
-
-
-
 
 
 </div>
